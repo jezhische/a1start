@@ -1,0 +1,10 @@
+<p id="title">{{title}}</p>
+<button [routerLink]="'..'">go back to medium</button><br>
+<!--<h3><a target="_blank" href="https://medium.com/ngx/why-do-you-need-unsubscribe-ee0c62b5d21f"-->
+<!--       [title]="mediumOriginPage">medium origin page</a></h3>-->
+<!--<h3><a target="_blank" href="https://medium.com/ngx/practical-use-rxjs-81aaab57045c"-->
+<!--       [title]="mediumRxJSPracticeOriginPage">medium RxJS practice origin page</a></h3>-->
+<button (click)="try2GetUsers()">try2GetUsers</button><br>
+<div id="output" *ngIf="output">
+  <pre>{{output}}</pre>
+</div>

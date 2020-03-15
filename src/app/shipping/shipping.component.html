@@ -1,0 +1,11 @@
+<h3>Shipping Prices</h3>
+
+<h3><a [routerLink]="''" [title]="home">home</a></h3>
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+<!-- for subscribe in component: -->
+<!--<div class="shipping-item" *ngFor="let shipping of shippingCosts">-->
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
+

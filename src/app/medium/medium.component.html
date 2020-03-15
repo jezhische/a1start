@@ -1,0 +1,30 @@
+<p>medium works!</p>
+
+<h5><a [routerLink]="''" [title]="home">home</a></h5>
+<h5><a target="_blank" href="https://medium.com/ngx/why-do-you-need-unsubscribe-ee0c62b5d21f"
+[title]="mediumOriginPage">medium origin page</a></h5>
+<h5><a target="_blank" href="https://medium.com/ngx/practical-use-rxjs-81aaab57045c"
+[title]="mediumRxJSPracticeOriginPage">medium RxJS practice origin page</a></h5>
+<h5><a target="_blank" href="https://medium.com/@w.dave.w/becoming-more-reactive-with-rxjs-flatmap-and-switchmap-ccd3fb7b67fa"
+       [title]="flatMapSwitchMap">Becoming more reactive with RxJS flatMap and switchMap origin page</a></h5>
+
+<div  *ngIf="rxjs_practice.childElementCount == 1" >
+  <button [routerLink]="'rxjs_practice'">go to rxjs_practice</button><br>
+  <button [routerLink]="'datepicker'">my-datepicker</button><br>
+  <button (click)="reset()">reset</button><br>
+  <button (click)="loadToOutput()">of() or from() value to output</button><br>
+  <button (click)="evenSubscribe()">is even five</button>
+
+</div>
+
+<div *ngIf="output">
+<!--  <p *ngFor="let output of outputArray">{{output}}</p>-->
+  <p >{{output}}</p>
+  <div #even [id]="'evenSubscribe'"></div>
+
+</div>
+<div #rxjs_practice>
+  <router-outlet></router-outlet>
+</div>
+
+
